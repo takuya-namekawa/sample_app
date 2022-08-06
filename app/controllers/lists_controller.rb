@@ -1,5 +1,6 @@
 class ListsController < ApplicationController
   def new
+    
     @list = List.new
   end
 
@@ -15,6 +16,7 @@ class ListsController < ApplicationController
   end
 
   def index
+    puts "作成したキー #{ENV['SECRET_KEY']}"
     @lists = List.all
 
 
